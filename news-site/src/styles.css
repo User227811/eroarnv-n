@@ -1,0 +1,129 @@
+:root {
+  --bg: #0b1020;
+  --card: #141a2a;
+  --text: #e8eaf6;
+  --muted: #a6b0d6;
+  --accent: #4f8cff;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Arial;
+}
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #0d1a32;
+  border-bottom: 1px solid #1f2a52;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 10px;
+  opacity: 0.9;
+}
+.hero {
+  padding: 40px 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.btn,
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.button {
+  background: var(--accent);
+  color: #fff;
+  margin-right: 10px;
+}
+.button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #555;
+}
+.news-list .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 12px 14px;
+}
+.card-title {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+.card-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.card-excerpt {
+  color: #ddd;
+  font-size: 0.95rem;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  color: #a9d1ff;
+  text-decoration: none;
+}
+.news-detail {
+  padding: 20px 0;
+  max-width: 800px;
+}
+.detail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.about {
+  padding: 20px 0;
+}
