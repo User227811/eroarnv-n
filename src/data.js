@@ -1,10 +1,11 @@
 // src/data.js
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
-const apiKey = "ba3791d4ecbb48efab52ba3b05061252"; // **ЗАМЕНИ ЭТО НА СВОЙ КЛЮЧ API**
+const apiKey = import.meta.env.VITE_API_KEY 
 const apiUrl = `https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}&language=ru&sortBy=relevancy`;
 
 export function useNews() {
+  console.log(apiKey)
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,7 +25,7 @@ export function useNews() {
             title: item.title,
             date: item.publishedAt,
             author: item.author || "Неизвестно",
-            image: item.urlToImage || "https://via.placeholder.com/800x420", // Default image
+            image: item.urlToImage || "https://via.placeholder.com/800x420", 
             excerpt: item.description || "Нет описания",
             content: item.content || item.description || "Нет контента",
             url: item.url,
